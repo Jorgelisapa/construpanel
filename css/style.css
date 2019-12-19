@@ -1,0 +1,603 @@
+/*
+By www.jorgesalamanca.com
+keepname.co
+
+    Content styles:
+
+1) Universal styles
+2) Body
+2) Main
+3) Slider
+4) About
+5) Portfolio
+6) Footer - Contact
+*/
+
+/*------------------------------------------*/
+
+/*universal styles*/
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	/*border: solid red 1px;*/
+} 
+	h1{
+		font-size: 20px;
+	}
+	h2{
+		font-size: 18px;
+	}
+
+	h3{
+		font-size: 16px;
+	}
+/*end universal styles*/
+
+/*background styles body*/
+body{
+	background-image: url(../img/about.svg);
+	background-attachment: fixed;
+	background-position: center center;
+	background-size: cover;
+} /*end background styles body*/
+
+
+
+					/*Main*/
+
+/*Generals main*/
+#main{
+	width: 100%;
+	height: 100%;
+	padding: 0;
+} /*End generals main*/
+
+/*icons rs main*/
+.rs-main{
+	position: absolute;
+	top: 2%;
+	right: 2%;
+	z-index: 20;
+	background: rgba(255, 255, 255, 0.4);
+	border-radius: 30px;
+} 
+
+.rs-main a, .rs-contact a {
+	text-decoration: none;
+	list-style: none;
+} /*fin icons rs main*/
+
+/*Logo and button main*/
+.logo-button {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0%;
+	padding: 0px;
+	z-index: 10;
+	justify-content: center;
+} /*End Logo and button main*/
+
+/*logo main*/
+.logo-main {
+	margin: auto;
+	top:45%;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	-webkit-transform: translateY(-45%);
+	-moz-transform: translateY(-45%);
+	transform: translateY(-45%);
+	z-index: 10;	
+} 
+/*...*/
+.logo-main img{
+	padding: 0;
+	max-width: 50%;
+	/* text-align: center; */
+	background: rgba(255, 255, 255, 0.4);
+} /*End logo main*/
+
+/*button main*/
+.btn-main-about {
+	width: 100%;
+	margin: auto;
+	top:85%;
+	position: absolute;
+	text-align: center;
+	display: block;
+	-webkit-transform: translateY(0%);
+	-moz-transform: translateY(0%);
+	transform: translateX(0%);
+	z-index: 30;
+} 
+
+ .btn-main-about a:hover {
+	background: rgba(165, 206, 55, 0.8);
+	color: white;
+}
+/*...*/
+.btn-main-about a {
+	padding: 8px 16px;
+	text-decoration: none;
+	font-size: 21px;
+	color: white;
+	background-color: rgba(25, 27, 77, 0.9);
+	cursor: pointer;
+	border-radius: 5px;
+} /*End button main*/
+
+/*slider imgs efects*/
+#content-slider{
+	margin: auto;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	/*box-shadow: 0 0 0 5px #fff, sombra
+				0 15px 50px;*/
+}
+
+#slider{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -o-flex;
+	display: flex;
+	width: 800%;
+	height: 100vh;	
+}
+
+#slider section{
+	width: 100%;
+}
+
+#slider img{
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;	
+}
+
+#btn-prev, #btn-next{
+	width: 40px;
+	height: 40px;
+	background: rgba(165, 206, 55, 0.5);
+	position: absolute;
+	top:50%;
+	transform: translateY(50%);
+	line-height: 40px;
+	font-size: 22px;
+	text-align: center;
+	border-radius: 50%;
+	cursor: pointer;
+	font-family: monospace;
+	z-index: 30;
+}
+
+#btn-prev:hover, #btn-next:hover {
+	background: rgba(255, 255, 255, 0.5);
+}
+
+#btn-prev{
+	left: 10px;
+}
+
+#btn-next{
+	right: 10px;
+}
+/*End slider imgs efects*/
+
+					/*End Main*/
+
+
+					/*General container*/
+
+/*In #about (description), #portfolio (images-portfolio) #footer (footer*/
+
+.container, .container-contact {
+	width: 100%;
+	max-width: 800px;
+	margin: auto;
+}
+
+.container {
+	padding: 130px 0px 30px;
+}
+
+					/*End General container*/
+
+
+					/*About*/
+
+/*Menu stiky*/
+
+.header {
+	width: 100%;
+	height: 70px;
+	padding: 0px 100px 0px;
+	background: #ffffff;
+}
+
+.menu {
+	position: absolute;
+	display: inline-block;
+	right: 0px;
+	font-size: 16px;
+	list-style: none;
+	padding-right: 100px;
+	margin-top: 18px;
+}
+
+.header .menu ul {
+	list-style: none;
+	overflow: hidden;
+}
+
+.header .menu ul li {
+	float: left;
+	list-style: none;
+	border-radius: 5px;
+	border: solid rgba(25, 27, 77, 0.1) 1px;
+}
+.logo-menu {
+	display: inline-block;
+}
+
+.logo-menu a img {
+	width: 400px;
+	height: 70px;
+	object-fit: cover;
+	
+}
+
+.header .menu ul li a {
+	display: block;
+	padding: 7px 17px;
+	color: #2E2E2E;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#menu li:hover a:hover {
+	background: #191B4D;
+	border-radius: 5px;
+	color: #FFFFFF;
+}
+
+.fixed { /*aplica cambios al pegarse*/
+	position: fixed;
+	top: 0%;
+	background: rgb(255, 253, 253);
+	z-index: 1000;
+	/*transform: translateX(13%);*/ /*temporal*/
+} 
+
+/*fin menu stiky*/
+
+/*Description Construpanel*/
+.description {
+	/*Mirar Contenedor General*/
+}
+
+.description h1 {
+	text-align: center;
+	padding-top: 0px;
+	letter-spacing: 0.1em;
+}
+
+.description h1 h3 p {
+	color: #2E2E2E;
+	text-align: justify;
+	letter-spacing: 0.1em;
+}
+
+.description h3 {
+	padding: 30px 0 0 30px;
+}
+
+.buttons-about {
+	text-align: center;
+	z-index: 40;
+	padding-top: 20px; 
+}
+
+.brochure{
+	text-align: center;
+}
+
+
+.trust {
+	width: 100%;
+	text-align: center;
+	padding: 30px 0 10px;
+	
+}
+
+.trust img {
+	max-width: 100%;
+	border-radius: 20%;
+
+}
+					/*End About*/
+
+
+/*Portfolio imgs efects*/
+.portfolio {
+	background: url(../img/4.jpg);
+	background-attachment: fixed;
+	background-position: center center;
+	background-size: cover;
+} 
+
+.images-portfolio  {
+	/*Ver Contenedor General*/
+}
+
+.images-portfolio h2 {
+	text-align: center;
+	padding-bottom: 40px;
+}
+
+
+.paragraph-1{
+	margin: auto;
+	margin-top: 30px;
+	max-width: 900px;
+	font-size: 20px;
+	text-align: justify;	
+}
+
+.content-all-images, .contacto {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;	
+}
+
+.content-images {
+	width: 220px;
+	height: 330px;   /*Acomodar segun Fotos*/
+	padding: 10px;
+	text-align: center;
+	-webkit-transition: all 300ms;
+	transition: all 300ms;
+	margin: 20px;
+	text-decoration: none;
+	background: rgba(255, 255, 255, 0.9);
+	border-radius: 0.3rem;
+}
+
+.content-images:hover{
+	background: rgba(165, 206, 55, 0.5);
+	color:#ffffff;
+}
+
+.content-images:hover{
+	-webkit-box-shadow: 0px 0px 40px -5px gray;
+	box-shadow: 0px 0px 40px -5px gray;
+}
+
+.content-images img{
+	width: 100%;   /*Acomodar segun Fotos*/
+	height: 265px; /*Acomodar segun Fotos*/
+	object-fit: cover;/*contain*/;
+	border-radius: 0.3rem;
+	-webkit-box-shadow: 0px 0px 40px -10px black;
+	box-shadow: 0px 0px 40px -10px black;	
+}
+
+.content-images h3, .content-images p {
+	margin:13px 20px;
+	text-decoration: none;
+	color: #2E2E2E;
+	display: inline-block;
+}
+
+.content-images h3 {
+	/* font-size: 16px; */
+}
+
+.content-images p {
+	font-size: 12px;
+}
+
+hr{
+	border-top: 1px solid #4#4#4#4;
+	border-bottom: 1px solid #4#4#4#4;
+	border-left: none;
+	border-rigth: none;
+	height: 6px;
+	width: 100%;
+	margin-top: 40px;
+} /*End Portfolio imgs efects*/
+
+
+					/*Footer*/  /*#191B4D*/
+
+.contact {
+	background: #191B4D;
+	width: 100%;
+	padding: 35px 0px 30px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.contact h2, .date p, .date a, .rs-contact, .copyright label, .copyright a, .date2 a {
+	text-align: center;
+	letter-spacing: 0.1em;
+	text-decoration: none;
+	color: white;
+	display: block;
+	padding: 5px;
+}
+
+.contact h2,.date p, .date a, .rs-contact, .copyright label, .copyright a, .date2 a {
+	font-size: 14px;
+}
+
+.date a:hover {
+	color: #EBEBEB;
+}
+
+
+
+
+
+.date, .date2, .rs-contact {
+	margin: auto 40px;
+	padding: 0px;
+}
+
+.date2 p{
+	text-align: center;
+	color: white;
+}
+
+.rs-contact {
+	z-index: 30;
+	background: rgba(165, 206, 55, 0.9);
+	border-radius: 30px;
+	margin-top: 15px;
+}
+
+.copyright label, .copyright a {
+	padding-top: 10px;
+	font-size: 10px;
+	font-weight: lighter;
+	
+}
+
+
+/*Footer*/
+
+/*Style portfolio html*/
+.container-htmls {
+	padding: 100px 0px 30px;
+}
+
+.content-all-images h3{
+	padding-top: 35px;
+}
+
+.htmls {
+	width:800px;
+	height: 600px;   /*Acomodar segun Fotos*/
+	object-fit: cover;
+}
+
+.htmls:hover{
+	background: rgba(255, 255, 255, 0.8);
+}
+
+.htmls img{
+	width: 100%;   /*Acomodar segun Fotos*/
+	height: 100%; /*Acomodar segun Fotos*/
+	object-fit: cover/*contain*/;
+	border-radius: 0.3rem;
+	-webkit-box-shadow: 0px 0px 40px -10px black;
+	box-shadow: 0px 0px 40px -10px black;	
+}
+
+.htmls h3, .htmls p {
+	margin:13px 20px;
+	text-decoration: none;
+	color: #2E2E2E;
+	display: inline-block;
+}
+
+.htmls h3 {
+	/* font-size: 16px; */
+}
+
+.htmls p {
+	font-size: 12px;
+}
+
+/*End Style portfolio html*/
+
+/* Media Querie */
+
+@media screen and (max-width: 1050px){
+	.logo-main img{
+		max-width: 70%;
+	}
+	.header{
+		padding: 0;
+	}
+	.header img{
+		padding-left: 10px;
+	}
+	.logo-menu a img {
+		width: 270px;
+		
+	}
+
+	.menu, li{
+		padding: 0px;
+	}
+}
+
+@media screen and (max-width: 800px){
+	.header {
+		height: 100px;
+	}
+
+	.header, .menu ul{
+		text-align: center;
+	}
+	.header .menu ul li a {
+		padding: 3px 15px;
+	}
+	.logo img{
+		display: block;
+	}
+	.menu{
+		position: relative;
+		margin-top: 0px;
+		display: block;
+		font-size:12px;
+	}
+
+	.logo-menu a img {
+		width: 250px;
+		height: 60px;}
+	.menu ul{
+		display: flex;
+		justify-content: center;
+	}
+	.rs-contact img{
+		width: 50px;
+	}
+}
+
+@media screen and (max-width: 1024px) and (orientation: landscape){
+	.logo-main img{
+		max-width: 45%;
+	}
+	.rs-main img{
+		width:50px;
+	}
+	#btn-prev, #btn-next{
+		width: 30px;
+		height: 30px;
+		line-height: 25px;
+		font-size: 33px;
+		text-align: center;
+	}
+	.btn-main-about a {
+		padding: 5px 11px;
+		font-size: 18px;
+		border-radius: 4px;
+
+
+}
+
+
+
+/* End Media Querie */
